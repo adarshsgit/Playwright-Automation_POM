@@ -12,16 +12,16 @@ test('Verify Login and add to cart', async ({ page }) => {
     await loginPage.login('adams123', 'test@123');
 
     const homePage = new HomePage(page);
-    const selectedProduct = "Nexus 6";
+    const selectedProduct = "Sony xperia z5";
     await homePage.selectProduct(selectedProduct)
     await homePage.addToCart();
-    await page.waitForTimeout(2000);
 
     const cartPage = new CartPage(page);
-    await cartPage.verifyCart();
-    await page.waitForTimeout(5000);
+    cartPage.goToCart();
+    const status = await cartPage.verifyItemInCart(selectedProduct);
+    expect(status).toBe(true);
+    
 
 })
-
 
 
