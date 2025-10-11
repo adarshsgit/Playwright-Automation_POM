@@ -3,7 +3,7 @@ import { LoginPage } from '../pages/LoginPage';
 import { HomePage } from '../pages/HomePage';
 import { CartPage } from '../pages/CartPage';
 
-test('Verify Login and add to cart', async ({ page }) => {
+test('Verify Login page and add to cart page', async ({ page }) => {
 
     const loginPage = new LoginPage(page);
     await loginPage.gotoURL();
