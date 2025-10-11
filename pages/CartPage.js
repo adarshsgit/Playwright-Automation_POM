@@ -7,6 +7,8 @@ class CartPage {
     this.cartLink = page.locator('xpath=//a[normalize-space()="Cart"]');
     this.cartHeading = page.getByRole('heading', { name: 'Products' });
     this.cartItems = page.locator('//tbody[@id="tbodyid"]/tr/td[2]');
+    this.cartHeading = page.getByRole('heading', { name: 'Products' });
+    this.cartItems = page.locator('//tbody[@id="tbodyid"]/tr/td[2]');
     this.placeOrder = page.getByRole('button', { name: 'Place Order' });
   }
 
@@ -31,4 +33,5 @@ class CartPage {
 }
 
 export { CartPage };
+
 

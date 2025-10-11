@@ -15,6 +15,7 @@ test('Verify Login and add to cart', async ({ page }) => {
     const selectedProduct = "Sony xperia z5";
     await homePage.selectProduct(selectedProduct)
     await homePage.addToCart();
+    await page.waitForTimeout(2000);
 
     const cartPage = new CartPage(page);
     cartPage.goToCart();
