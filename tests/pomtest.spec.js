@@ -21,6 +21,7 @@ test('Verify Login and add to cart', async ({ page }) => {
     cartPage.goToCart();
     const status = await cartPage.verifyItemInCart(selectedProduct);
     expect(status).toBe(true);
+
     
 
 })
