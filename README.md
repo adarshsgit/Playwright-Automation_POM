@@ -1,9 +1,9 @@
-🎭 Playwright Automation Framework with POM & Allure Report
+🎭 Playwright Automation Framework with POM, Cucumber BDD & Allure Report
 📌 Overview
-This repository contains an end-to-end test automation framework built using Playwright with the Page Object Model (POM) design pattern. It integrates Allure Reports for rich and interactive test reporting.
+This repository features a robust end-to-end test automation framework built with Playwright, structured using the Page Object Model (POM), enhanced with Cucumber BDD for behavior-driven development, and integrated with Allure Reports for rich test reporting.
 
 🧰 Tech Stack
-Test Runner: Playwright Test
+Test Runner: Playwright + Cucumber
 Language:  JavaScript
 Design Pattern: Page Object Model (POM)
 Reporting: Allure Report
