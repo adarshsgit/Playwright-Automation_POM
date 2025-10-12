@@ -8,6 +8,7 @@ class HomePage {
     this.addToCartButton = page.getByRole('link', { name: 'Add to cart' });
   }
 
+  //Select product using product name
   async selectProduct(productName) {
     const products = await this.productList.elementHandles(); // Get all product elements
     for (const product of products) {
@@ -19,6 +20,7 @@ class HomePage {
     }
   }
 
+  //Adding Product to Cart.
   async addToCart() {
     this.page.on('dialog', async dialog => {
       if (dialog.message().includes('Product added')) {

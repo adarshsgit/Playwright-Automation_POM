@@ -12,12 +12,13 @@ class CartPage {
     this.placeOrder = page.getByRole('button', { name: 'Place Order' });
   }
 
-
+  //Navigate to Cart page.
   async goToCart() {
     await this.cartLink.click();
     await expect(this.cartHeading).toBeVisible();
   }
 
+  //Verify products in Cart page.
   async verifyItemInCart(itemName) {
     await this.cartItems.first().waitFor();
     const productsinCart = await this.cartItems.elementHandles();
